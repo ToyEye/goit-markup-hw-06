@@ -43,6 +43,7 @@ body {
   --icon-color: #afb1b8;
   --bgc-icon-footer: rgba(255, 255, 255, 0.1);
   --bgc-overflow: rgba(33, 150, 243, 0.9);
+  --form-color: rgba(117, 117, 117, 0.5);
 }
 
 a {
@@ -677,6 +678,7 @@ ul {
   letter-spacing: 0.03em;
   color: var(--lite-color);
   margin-bottom: 20px;
+  letter-spacing: 0.03em;
 }
 
 .foot-icon-list {
@@ -709,6 +711,21 @@ ul {
   fill: currentColor;
 }
 
+.subscribe {
+  margin-left: 93px;
+}
+
+.subscribe .title {
+  font-family: roboto, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.172;
+  letter-spacing: 0.03em;
+  color: var(--lite-color);
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+}
+
 /* Модальное окно */
 .backdrop {
   position: fixed;
@@ -733,8 +750,8 @@ ul {
   min-width: 528px;
   min-height: 581px;
   background-color: var(--lite-color);
-  padding: 15px;
   border-radius: 4px;
+
   animation-name: modal;
   animation-duration: 3000ms;
   animation-timing-function: linear;
@@ -742,9 +759,6 @@ ul {
   transform-origin: top left;
 }
 
-/* .modal::before {
-  content: "";
-} */
 .modal .btn {
   position: absolute;
   top: 0;
@@ -752,13 +766,21 @@ ul {
   margin-right: 8px;
   margin-top: 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--primary-color);
   border-radius: 50%;
-  padding: 6px;
+  padding: 5px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal .close {
+.modal .btn:hover,
+.modal .btn:focus {
+  color: var(--activ);
+}
+
+.btn .close {
   width: 18px;
   height: 18px;
+  color: currentColor;
 }
 
 @keyframes modal {
@@ -772,4 +794,102 @@ ul {
 
 .order {
   display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  padding-right: 39px;
+}
+
+.order .title {
+  font-family: roboto, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.172;
+  letter-spacing: 0.03em;
+  color: var(--primary-color);
+  padding-top: 40px;
+}
+
+.order label {
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.171;
+  letter-spacing: 0.01em;
+  padding-top: 10px;
+  padding-bottom: 4px;
+  color: var(--accent-color);
+}
+
+input {
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+textarea {
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.172;
+  letter-spacing: 0.01em;
+  padding: 12px 16px;
+  color: var(--form-color);
+  resize: none;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+textarea:hover,
+textarea:focus {
+  border: 1px solid var(--activ);
+}
+
+input:hover,
+input:focus {
+  border: 1px solid var(--activ);
+}
+
+.rules {
+  color: var(--accent-color);
+  font-family: roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.714;
+  padding-top: 20px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.rules .link {
+  color: var(--activ);
+  text-decoration: underline;
+}
+
+.send-btn {
+  text-align: center;
+}
+
+.send-btn .send {
+  font-family: roboto, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  padding: 10px 55px;
+  color: var(--lite-color);
+  background-color: var(--logo);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-top: 30px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.send-btn .send:hover,
+.send-btn .send:focus {
+  background-color: #188ce8;
 }

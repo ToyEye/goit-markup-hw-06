@@ -395,6 +395,12 @@
                         </li>
                     </ul>
                 </div>
+                <div class="subscribe">
+                    <form>
+                        <label for="subscribe">Подпишитесь на рассылку</label>
+                        <input type="email" name="subscribe" id="subscribe" placeholder="E-mail">
+                    </form>
+                </div>
             </div>
         </div>
     </footer>
@@ -403,14 +409,14 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="btn  " type="button" data-modal-close>
+            <button class="btn" type="button" data-modal-close>
                 <svg class="close">
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
             <form name="order-form">
-                <div>
-                    
+                <div class="order">
+                    <h2 class="title">Оставьте свои данные, мы вам перезвоним</h2>
                     <label for="name">Имя</label>
                     <input type="name" name="name" id="name">
 
@@ -424,8 +430,17 @@
 
                     
                     <label for="comment">Комментарий</label>
-                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст" resize></textarea>
+
+                    <div class="rules">
+                    <input type="checkbox" name="rules">
+                    <label for="rules" >Соглашаюсь с рассылкой и принимаю <a href="" class="link"> Условия договора</a></label>
+                    </div>
+                    <div class="send-btn">
+                    <button type="submit" class="send">Отправить</button>
+                    </div>
                 </div>
+                
             </form>
         </div>
     </div>
