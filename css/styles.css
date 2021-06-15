@@ -911,9 +911,9 @@ ul {
   border: 1px solid var(--activ);
 }
 
-.order:focus-within > .order input,
-.order:focus-within > .order textarea,
-.order:focus-within > .form-svg {
+.order:focus-within ~ .order input,
+.order:focus-within ~ .order textarea,
+.order:focus-within ~ .form-svg {
   fill: var(--activ);
   outline: none;
   border: 1px solid var(--activ);
