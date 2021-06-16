@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework 5</title>
+    <title>Homework 6</title>
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -395,11 +395,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="subscribe ">
+                <div class="subscribe">
                     <h3 class="title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
-                    <form>                       
-                        <label for="subscribe"></label>
-                        <input type="email" name="subscribe" id="subscribe" placeholder="E-mail" width="500px">
+                    <form class="form-subscribe">                       
+                        <label>
+                            <input type="email" name="subscribe" placeholder="E-mail" width="500px">
+                        </label>
                         <button type="submit" class="btn">
                             <span class="text"> Подписаться</span>
                             <svg class="send-svg">
@@ -421,42 +422,46 @@
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
-            <form name="order-form">
+            <form class="form">
                
                     <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
-                    <div class="order">
-                        <label for="name">Имя</label>
-                        <input type="name" name="name" id="name">
-                        <svg class="form-svg">
-                            <use href="./images/icons.svg#icon-name"></use>
-                        </svg>
-                    </div>
-                    <div class="order">
-                        <label for="tel">Телефон</label>
-                        <input type="tel" name="tel" id="tel">
-                        <svg class="form-svg">
-                            <use href="./images/icons.svg#icon-phone"></use>
-                        </svg>
-                    </div>
-                    <div class="order">
-                        <label for="email">Почта</label>
-                        <input type="email" name="email" id="email">
-                        <svg class="form-svg">
-                            <use href="./images/icons.svg#icon-email"></use>
-                        </svg>
-                    </div>
-                    <div class="order">
-                        <label for="comment">Комментарий</label>
-                        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст" resize></textarea>
-                    </div>
-                    <div class="rules">
-                        <input type="checkbox" name="rules">
-                        <label for="rules" >Соглашаюсь с рассылкой и принимаю <a href="" class="link"> Условия договора</a></label>
-                    </div>
-                    <div class="send-btn">
-                        <button type="submit" class="send">Отправить</button>
-                    </div>
-                              
+    
+                        <label class="form-label">
+                            <span class="form-text"> Имя</span>
+                            <input class="form-input" type="text">
+                            <svg class="form-icon">
+                                <use href="./images/icons.svg#icon-name"></use>
+                            </svg>
+                        </label>
+
+                        <label class="form-label">
+                            <span class="form-text"> Телефон</span>
+                            <input class="form-input" type="email">
+                            <svg class="form-icon">
+                                <use href="./images/icons.svg#icon-phone"></use>
+                            </svg>
+                        </label>
+                  
+                        <label class="form-label">
+                            <span class="form-text"> Почта</span>
+                            <input class="form-input" type="tel">
+                            <svg class="form-icon">
+                                <use href="./images/icons.svg#icon-email"></use>
+                            </svg>
+                        </label>
+                
+                        <label class="form-label">
+                            <span class="form-text"> Комментарий</span>
+                            <textarea name="commit" id="" cols="30" rows="10" class="form-commit" placeholder="Введите текст"></textarea>
+                        </label>
+            
+ 
+                        <label class="rules">
+                            <input type="checkbox" class="checkbox"><span class="form-checked"></span> Соглашаюсь с рассылкой и принимаю <a href="#"
+                                class="agreement"> Условия договора</a> 
+                            </label>
+
+                    <button type="submit" class="form-btn" ><span class="send" > Отправить</span></button>
             </form>
         </div>
     </div>
